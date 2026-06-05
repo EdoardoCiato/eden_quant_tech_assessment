@@ -3,9 +3,9 @@ import ruptures as rpt
 import matplotlib.pyplot as plt
 
 # 1. Datasets
-orion_df = pd.read_csv('orion_eod.csv')
-cleanergy_df = pd.read_csv('cleanergy_eod.csv')
-novaterra_df = pd.read_csv('novaterra_eod.csv')
+orion_df = pd.read_csv('data/orion_eod.csv')
+cleanergy_df = pd.read_csv('data/cleanergy_eod.csv')
+novaterra_df = pd.read_csv('data/novaterra_eod.csv')
 
 def plot_structural_breaks(df, break_indices, company_name):
     colors = {
@@ -110,20 +110,6 @@ orion_data, orion_sig, orion_breaks = find_structural_breaks(orion_df, "Orion Ch
 cleanergy_data, clean_sig, clean_breaks = find_structural_breaks(cleanergy_df, "Cleanergy", penalty=20)
 nova_data, nova_sig, nova_breaks = find_structural_breaks(novaterra_df, "NovaTerra AI", penalty=20)
 
-plot_structural_breaks(
-    orion_data,
-    orion_breaks,
-    "Orion Chips"
-)
-
-plot_structural_breaks(
-    cleanergy_data,
-    clean_breaks,
-    "Cleanergy"
-)
-
-plot_structural_breaks(
-    nova_data,
-    nova_breaks,
-    "NovaTerra AI"
-)
+plot_structural_breaks( orion_data, orion_breaks,"Orion Chips")
+plot_structural_breaks(cleanergy_data,clean_breaks,"Cleanergy")
+plot_structural_breaks( nova_data,nova_breaks,"NovaTerra AI")

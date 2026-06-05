@@ -142,17 +142,17 @@ def table_for_presentation(risk_share_table):
     
 def main():
     current_portfolio = [
-        {'ticker': 'ASML', 'market value of shares': 5000, 'path': 'ASML_1d_data.csv'},
-        {'ticker': 'NOVO-B', 'market value of shares': 5000, 'path': 'NOVO-B.CO_1d_data.csv' },
-        {'ticker': 'PVH', 'market value of shares': 7500, 'path': 'PVH_1d_data.csv'},
-        {'ticker': 'XLU', 'market value of shares': 7500, 'path': 'XLU_1d_data.csv' },
-        {'ticker': 'GLD', 'market value of shares': 10000, 'path': 'GLD_1d_data.csv'}  
+        {'ticker': 'ASML', 'market value of shares': 5000, 'path': 'data/ASML_1d_data.csv'},
+        {'ticker': 'NOVO-B', 'market value of shares': 5000, 'path': 'data/NOVO-B.CO_1d_data.csv' },
+        {'ticker': 'PVH', 'market value of shares': 7500, 'path': 'data/PVH_1d_data.csv'},
+        {'ticker': 'XLU', 'market value of shares': 7500, 'path': 'data/XLU_1d_data.csv' },
+        {'ticker': 'GLD', 'market value of shares': 10000, 'path': 'data/GLD_1d_data.csv'}  
     ]
 
     possible_stocks = [
-    { 'ticker': 'Orion Chips', 'market value of shares': 5000, 'path': 'orion_eod.csv'},
-    {'ticker': 'Cleanergy', 'market value of shares': 5000, 'path': 'cleanergy_eod.csv'},
-    {'ticker': 'NovaTerra AI', 'market value of shares': 5000, 'path': 'novaterra_eod.csv'}
+    { 'ticker': 'Orion Chips', 'market value of shares': 5000, 'path': 'data/orion_eod.csv'},
+    {'ticker': 'Cleanergy', 'market value of shares': 5000, 'path': 'data/cleanergy_eod.csv'},
+    {'ticker': 'NovaTerra AI', 'market value of shares': 5000, 'path': 'data/novaterra_eod.csv'}
     ]
     price_matrix = pd.DataFrame(columns=('Date',))
     portfolio_weights = []
